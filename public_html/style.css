@@ -1,10 +1,9 @@
-body{
+body {
     background: linear-gradient(to right, blue, pink);
-    
 }
-main{
-    margin: auto;
-    margin-top: 30px;
+
+main {
+    margin: 30px auto auto;
     border-radius: 15px;
     min-width: 500px;
     max-width: 900px;
@@ -14,26 +13,24 @@ main{
     text-align: center;
 }
 
-.main-content{
+.main-content {
     margin-left: auto;
     text-align: center;
     padding-bottom: 30px;
 }
-.inputs-wraper{
+
+.inputs-wrapper {
     text-align: left;
-    /* margin-left: auto; */
-    /* width: 100%; */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: left; */
+    padding: 40px;
 }
-.input-wraper{
+
+.input-wrapper {
     text-align: center;
     margin-left: auto;
     display: inline;
-    
 }
-.input-wraper span{
+
+.input-wrapper span {
     left: 0;
     width: 150px;
     display: inline-block;
@@ -41,19 +38,80 @@ main{
     padding-bottom: 15px;
 }
 
-
-.input-wraper input{
+.input-wrapper input {
     margin-right: 0;
     right: 0;
     padding: 3px;
 }
 
-#description{
+.description {
     padding: 15px;
-    
-    
 }
 
-#result{
+.result {
     text-align: left;
+}
+
+.result-table {
+    font-family: 'san francisco text regular', 'arial', 'helvetica', sans-serif;
+    text-decoration-style: initial;
+    text-transform: none;
+    width: max-content;
+    word-spacing: 0;
+    padding: 40px;
+}
+
+.logo-cell {
+    align-content: center;
+    padding: 0;
+    border-right: 2px solid #BDBDBD;
+}
+
+.logo-wrap {
+    padding-right: 40px;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 10px;
+    width: 133px;
+}
+
+.text-cell {
+    font-family: 'Manrope', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
+    line-height: 19px;
+    padding-left: 40px;
+    display: inline-flex;
+}
+
+.result-name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.position-cell {
+    color: #949494;
+    padding-bottom: 22px;
+}
+
+.telegram-cell {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:visited {
+    color: #000000;
 }

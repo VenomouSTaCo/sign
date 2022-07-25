@@ -1,30 +1,63 @@
-const button = document.querySelector('.btn-primary');
-button.onclick = () => {
-    const name = document.querySelector('.name').value;
+let lastInput = JSON.parse(localStorage.getItem('params')) || {
+    name: '',
+    position: '',
+    phone: '',
+    mobile: '',
+    telegram: '',
+    email: '',
+    website: '',
+};
 
-}
+const name = document.querySelector('.name');
+const position = document.querySelector('.position');
+const officePhone = document.querySelector('.office-phone');
+const mobile = document.querySelector('.personal-phone');
+const telegram = document.querySelector('.telegram');
+const email = document.querySelector('.email');
+const website = document.querySelector('.website');
+const form = document.querySelector('.input-form');
 
-button.onclick = function () {
-    var yourname = document.getElementById("yourname").value;
-    document.getElementById("result-yourname").innerHTML = yourname;
+name.value = lastInput.name;
+position.value = lastInput.position;
+officePhone.value = officePhone.value || lastInput.phone;
+mobile.value = lastInput.mobile;
+telegram.value = lastInput.telegram || telegram.value;
+email.value = lastInput.email;
+website.value = website.value || lastInput.website;
 
-    var email = document.getElementById("email").value;
-    document.getElementById("result-email").innerHTML = email;
-    document.getElementById("result-email-link").href = "mailto:" + email;
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    var position = document.getElementById("position").value;
-    document.getElementById("result-position").innerHTML = position;
+    const currentName = name.value;
+    document.querySelector('.result-name').innerHTML = currentName;
+    lastInput.name = currentName;
 
-    var phone = document.getElementById("phone").value;
-    document.getElementById("result-phone").innerHTML = "+" + phone;
-    document.getElementById("result-phone-link").href = "https://api.whatsapp.com/send?phone=" + phone;
+    const currentPosition = position.value;
+    document.querySelector('.result-position').innerHTML = currentPosition;
+    lastInput.position = currentPosition;
 
-    var telegram = document.getElementById("telegram").value;
-    document.getElementById("result-phone").innerHTML = "+" + phone;
-    document.getElementById("result-telegram-link").href = "https://t.me/" + telegram;
+    const currentPhone = officePhone.value;
+    document.querySelector('.office-phone-out').innerHTML = currentPhone;
+    lastInput.phone = currentPhone;
 
-    var facebook = document.getElementById("facebook").value;
-    document.getElementById("result-facebook").href = "https://www.facebook.com/" + facebook;
+    const currentMobile = mobile.value;
+    document.querySelector('.personal-phone-out').innerHTML = currentMobile;
+    lastInput.mobile = currentMobile;
 
+    const currentTelegram = telegram.value;
+    document.querySelector('.result-telegram-link').innerHTML = currentTelegram;
+    document.querySelector('.result-telegram-link').href = "https://t.me/" + currentTelegram.slice(1);
+    lastInput.telegram = currentTelegram;
 
-}
+    const currentEmail = email.value;
+    document.querySelector('.result-email-link').innerHTML = currentEmail;
+    document.querySelector('.result-email-link').href = "mailto:" + currentEmail;
+    lastInput.email = currentEmail;
+
+    const currentWebsite = website.value;
+    document.querySelector('.result-website').innerHTML = currentWebsite;
+    document.querySelector('.result-website').href = currentWebsite;
+    lastInput.website = currentWebsite;
+
+    localStorage.setItem('params', JSON.stringify(lastInput));
+});
