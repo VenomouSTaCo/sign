@@ -19,7 +19,7 @@
             <p>Скопируй все, что ниже кнопки и добавь себе в в подпись </p>
             ("настройки" --≥ "Личные данные подпись, портрет")
         </div>
-        <form class="input-form" >
+        <form class="input-form">
             <div class="inputs-wrapper">
                 <div class="input-wrapper">
                     <label for="your-name">Имя Фамилия</label>
@@ -33,7 +33,8 @@
                 <br>
                 <div class="input-wrapper">
                     <label for="office-phone">Телефон офиса</label>
-                    <input type="tel" class="office-phone" placeholder="+7 (xxx) xxx-xx-xx" value="+7 800 444-39-66"  required
+                    <input type="tel" class="office-phone" placeholder="+7 (xxx) xxx-xx-xx" value="+7 800 444-39-66"
+                           required
                            id="office-phone">
                 </div>
                 <br>
@@ -55,7 +56,8 @@
                 <br>
                 <div class="input-wrapper">
                     <label for="website">Сайт</label>
-                    <input type="text" class="website" placeholder="" value="https://napoleonit.ru" id="website" required>
+                    <input type="text" class="website" placeholder="" value="https://napoleonit.ru" id="website"
+                           required>
                 </div>
             </div>
             <button class="btn-update" type="submit">Обновить данные</button>
@@ -63,59 +65,73 @@
     </div>
 
     <div class="result" id="result">
-        <table class="result-table">
+        <table class="result-table"
+               style="height: auto; max-height: 100px; text-transform: none; width: 490px; word-spacing: 0; border-spacing: 0">
             <tbody>
-            <tr>
-                <td class="logo-cell" rowspan="7">
-                    <div class="logo-wrap">
+            <tr style="font-family: 'Manrope', serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                color: #000000;
+                line-height: 19px;
+                padding: 0 0 0 40px;">
+                <td class="logo-cell" rowspan="7" style="align-content: center; padding: 0;size: auto;border-right: 2px solid #BDBDBD;width: 173px">
+                    <div class="logo-wrap" style="padding: 0 40px 0 0;">
                         <a class="logo-link" href="https://napoleonit.ru">
-                            <img class="logo-img" src="https://avatars.mds.yandex.net/get-mail-signature/2434044/16941869454584b857b97292e8be7e45/orig" alt="Лого Наполеон">
+                            <img class="logo-img"
+                                 src="https://avatars.mds.yandex.net/get-mail-signature/2434044/16941869454584b857b97292e8be7e45/orig"
+                                 alt="Лого Наполеон" style="
+                                 width: 133px;
+                                 padding: 0;">
                         </a>
                     </div>
                 </td>
-                <td class="text-cell name-cell">
+                <td class="text-cell name-cell" colspan="2" rowspan="1" style="font-weight: 600;font-size: 24px;line-height: 33px;height: 33px ;width: 500px; max-width: 500px; padding: 0 0 0 40px;">
                     <span class="result-name"></span>
                 </td>
             </tr>
             <tr>
-                <td class="text-cell position-cell">
+                <td class="text-cell position-cell" colspan="2" rowspan="1" style="color: #949494;
+                    font-weight: 500;font-size: 14px;line-height: 19px;height: 19px;width: 300px; max-width: 300px; padding: 0 0 22px 40px;">
                     <span class="result-position"></span>
                 </td>
             </tr>
             <tr>
-                <td class="text-cell office-phone-cell">
+                <td class="text-cell office-phone-cell" colspan="2" rowspan="1" style="font-weight: 500;font-size: 14px;line-height: 19px;height: 19px;width: 300px; max-width: 300px; padding: 0 0 0 40px;">
                     <span class="result-office-phone">Phone:
                         <span class="office-phone-out"></span>
                     </span>
                 </td>
             </tr>
             <tr>
-                <td class="text-cell personal-phone-cell">
+                <td class="text-cell personal-phone-cell" colspan="2" rowspan="1" style="font-weight: 500;font-size: 14px;line-height: 19px;height: 19px;width: 300px; max-width: 300px; padding: 0 0 0 40px;">
                     <span class="result-personal-phone">Mobile:
                         <span class="personal-phone-out"></span>
                     </span>
                 </td>
             </tr>
             <tr>
-                <td class="text-cell telegram-cell">
+                <td class="text-cell telegram-cell" colspan="2" rowspan="1" style="font-weight: 500;font-size: 14px;line-height: 19px;height: 19px;width: 300px; max-width: 300px; padding: 20px 0 20px 40px; text-decoration: none;">
                     <span class="result-telegram">Telegram:
-                        <a class="result-telegram-link"></a>
+                        <a class="result-telegram-link"
+                           style="color: rgb(0, 0, 0)!important; text-decoration: none!important;"></a>
                     </span>
                 </td>
             </tr>
             <tr>
-                <td class="text-cell email-cell">
+                <td class="text-cell email-cell" colspan="2" rowspan="1" style="font-weight: 500;font-size: 14px;line-height: 19px;height: 19px;width: 300px; max-width: 300px; text-decoration: none; padding: 0 0 0 40px;">
                     <a class="result-email-link"
                        href=""
                        rel="noopener noreferrer"
-                       style="color: rgb(0, 0, 0);"
+                       style="color: rgb(0, 0, 0)!important; text-decoration: none!important;"
                        data-click-action="common.go">
                     </a>
                 </td>
             </tr>
             <tr>
-                <td class="text-cell website-cell">
-                    <a class="result-website"></a>
+                <td class="text-cell website-cell" colspan="2" rowspan="1" style="font-weight: 500;font-size: 14px;line-height: 19px;height: 19px;width: 300px; max-width: 300px; text-decoration: none; padding: 0 0 0 40px;">
+                    <a class="result-website"
+                       style="color: rgb(0, 0, 0)!important; text-decoration: none!important;"></a>
                 </td>
             </tr>
             </tbody>
