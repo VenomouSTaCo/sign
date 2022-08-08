@@ -11,7 +11,7 @@ let lastInput = JSON.parse(localStorage.getItem('params')) || {
 const name = document.querySelector('.name');
 const position = document.querySelector('.position');
 const officePhone = document.querySelector('.office-phone');
-const mobile = document.querySelector('.personal-phone');
+const mobile = document.querySelector('.mobile-phone');
 const telegram = document.querySelector('.telegram');
 const email = document.querySelector('.email');
 const website = document.querySelector('.website');
@@ -41,7 +41,7 @@ form.addEventListener('submit', (e) => {
     lastInput.phone = currentPhone;
 
     const currentMobile = mobile.value;
-    document.querySelector('.personal-phone-out').innerHTML = currentMobile;
+    document.querySelector('.mobile-phone-out').innerHTML = currentMobile;
     lastInput.mobile = currentMobile;
 
     const currentTelegram = telegram.value;

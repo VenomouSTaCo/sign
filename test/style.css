@@ -3,8 +3,7 @@ body{
     
 }
 main{
-    margin: auto;
-    margin-top: 30px;
+    margin: 30px auto auto;
     border-radius: 15px;
     min-width: 500px;
     max-width: 900px;
@@ -19,21 +18,19 @@ main{
     text-align: center;
     padding-bottom: 30px;
 }
-.inputs-wraper{
-    text-align: left;
-    /* margin-left: auto; */
-    /* width: 100%; */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: left; */
+
+form{
+    margin-top: 30px;
+
 }
-.input-wraper{
+
+.inputs-wrapper{
     text-align: center;
-    margin-left: auto;
-    display: inline;
-    
+    padding-left: 30px;
+
 }
-.input-wraper span{
+
+.input-wrapper label{
     left: 0;
     width: 150px;
     display: inline-block;
@@ -41,19 +38,20 @@ main{
     padding-bottom: 15px;
 }
 
-
-.input-wraper input{
+.input-wrapper input{
     margin-right: 0;
     right: 0;
     padding: 3px;
 }
 
-#description{
+.description{
     padding: 15px;
     
     
 }
 
-#result{
+.result{
+    display: flex;
+    justify-content: center;
     text-align: left;
 }
