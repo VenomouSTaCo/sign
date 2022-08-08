@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+
+        #result-website {
+            text-decoration: none !important;
+            color: rgb(0, 0, 0) !important;
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -19,103 +35,117 @@
             <p>Скопируй все, что ниже кнопки и добавь себе в в подпись </p>
             ("настройки" --≥ "Личные данные подпись, портрет")
         </div>
-        <form class="input-form" >
+        <form class="input-form">
             <div class="inputs-wrapper">
                 <div class="input-wrapper">
                     <label for="your-name">Имя Фамилия</label>
-                    <input type="text" class="name" value="" id="your-name" required>
+                    <input type="text" class="input name" placeholder="" value="" id="your-name" maxlength="" required>
                 </div>
-                <br>
                 <div class="input-wrapper">
                     <label for="position">Должность</label>
-                    <input type="text" class="position" id="position" required>
+                    <input type="text" class="input position" placeholder="" value="" id="position" required>
                 </div>
-                <br>
                 <div class="input-wrapper">
                     <label for="office-phone">Телефон офиса</label>
-                    <input type="tel" class="office-phone" placeholder="+7 (xxx) xxx-xx-xx" value="+7 800 444-39-66"  required
-                           id="office-phone">
+                    <input type="text" class="input office-phone" placeholder="+7 (xxx) xxx-xx-xx"
+                           value="+7 800 444-39-66"
+                           id="office-phone" maxlength="16" minlength="11" required>
                 </div>
-                <br>
                 <div class="input-wrapper">
-                    <label for="personal-phone">Телефон личный</label>
-                    <input type="tel" class="personal-phone" placeholder="+7 xxx xxx-xx-xx" required
-                           id="personal-phone">
+                    <label for="mobile">Телефон личный</label>
+                    <input type="text" class="input mobile-phone" placeholder="+7 (xxx) xxx-xx-xx" value=""
+                           maxlength="16"
+                           minlength="11" id="mobile" required>
                 </div>
-                <br>
                 <div class="input-wrapper">
                     <label for="telegram">Телеграм</label>
-                    <input type="text" class="telegram" placeholder="" value="@" id="telegram" required>
+                    <input type="text" class="input telegram" placeholder="" value="@" id="telegram" required>
                 </div>
-                <br>
                 <div class="input-wrapper">
                     <label for="email">Почта корпоративная</label>
-                    <input type="text" class="email" placeholder="" value="" id="email" required>
+                    <input type="text" class="input email" placeholder="" value="" id="email" required>
                 </div>
-                <br>
                 <div class="input-wrapper">
                     <label for="website">Сайт</label>
-                    <input type="text" class="website" placeholder="" value="https://napoleonit.ru" id="website" required>
+                    <input type="text" class="input website" placeholder="" value="https://napoleonit.ru" id="website"
+                           required>
                 </div>
+                <br>
             </div>
-            <button class="btn-update" type="submit">Обновить данные</button>
+            <button id="button" type="submit">Обновить данные</button>
         </form>
     </div>
 
-    <div class="result" id="result">
-        <table class="result-table">
+
+    <div class="result" id="result" style="padding-bottom: 20px;">
+        <table style="font-family: 'san francisco text regular', 'arial', 'helvetica', sans-serif;
+        height: 260px; text-decoration-style: initial; text-transform: none; width: 500px; word-spacing: 0;">
             <tbody>
             <tr>
-                <td class="logo-cell" rowspan="7">
-                    <div class="logo-wrap">
-                        <a class="logo-link" href="https://napoleonit.ru">
-                            <img class="logo-img" src="https://avatars.mds.yandex.net/get-mail-signature/2434044/16941869454584b857b97292e8be7e45/orig" alt="Лого Наполеон">
+                <td rowspan="6" style="width: 174px; padding: 0; text-align: right">
+                    <div>
+                        <a href="https://napoleonit.ru">
+                            <img src="https://avatars.mds.yandex.net/get-mail-signature/1597781/4f1bae72deaaa20cf9ef46778c301d4d/orig"
+                            >
                         </a>
                     </div>
                 </td>
-                <td class="text-cell name-cell">
-                    <span class="result-name"></span>
-                </td>
-            </tr>
-            <tr>
-                <td class="text-cell position-cell">
-                    <span class="result-position"></span>
-                </td>
-            </tr>
-            <tr>
-                <td class="text-cell office-phone-cell">
-                    <span class="result-office-phone">Phone:
-                        <span class="office-phone-out"></span>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="text-cell personal-phone-cell">
-                    <span class="result-personal-phone">Mobile:
-                        <span class="personal-phone-out"></span>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="text-cell telegram-cell">
-                    <span class="result-telegram">Telegram:
-                        <a class="result-telegram-link"></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="text-cell email-cell">
-                    <a class="result-email-link"
-                       href=""
-                       rel="noopener noreferrer"
-                       style="color: rgb(0, 0, 0);"
-                       data-click-action="common.go">
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="text-cell website-cell">
-                    <a class="result-website"></a>
+                <td colspan="3" rowspan="1" style="font-weight: bold; height: 18px; padding-left: 40px"
+                    id="result-table">
+                    <table style="border-left: 2px solid #C7C7C7;">
+                        <tbody>
+                        <tr>
+                            <td style=" font-weight: 600;font-size: 24px;line-height: 33px;padding-left: 40px;">
+                                <span class="result-name"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;font-size: 14px;line-height: 19px;color: #949494;padding: 0 0 0 40px;"
+                                    class="result-position">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 41px;vertical-align: bottom;font-weight: 500;font-size: 14px;line-height: 19px;text-decoration: none;padding: 0 0 0 40px;">
+                                <span class="result-office-phone" id="result-phone">Phone:
+                                    <span class="office-phone-out"
+                                          style="text-decoration: none;">+7 800 555-35-35</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: bottom;font-weight: 500;font-size: 14px;line-height: 19px;text-decoration: none;padding: 0 0 0 40px;">
+                                <span class="result-mobile-phone" id="result-mobile">Mobile:
+                                    <span class="mobile-phone-out" style="text-decoration: none;"></span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <td style="height: 39px;vertical-align: bottom;font-weight: 500;font-size: 14px;line-height: 19px;color: rgb(0, 0, 0);padding: 0 0 0 40px;">
+                                <span class="result-telegram">Telegram:
+                                    <a class="result-telegram-link"
+                                       style="text-decoration: none;color: rgb(0, 0, 0);"></a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 39px;vertical-align: bottom;font-weight: 500;font-size: 14px;line-height: 19px;text-decoration: none;padding: 0 0 0 40px;">
+                                <a class="result-email-link"
+                                   href=""
+                                   rel="noopener noreferrer"
+                                   style="color: rgb(0, 0, 0);text-decoration: none;"
+                                   data-click-action="common.go">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: bottom;font-weight: 500;font-size: 14px;line-height: 19px;text-decoration: none;color: rgb(0, 0, 0);padding: 0 0 0 40px;">
+                                <a class="result-website" id="result-website"
+                                   style="color: rgb(0, 0, 0);text-decoration: none;"></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </td>
             </tr>
             </tbody>
